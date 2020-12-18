@@ -26,7 +26,7 @@ const Api = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{item.title}</h5>
                                 <p className="card-text">{item.author}</p>
-                                <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                                 <a href={item.url} className="btn btn-secondary" role="button" aria-disabled="true" style = {{width: 100 + '%'}}>Ver más</a>
                             </div>
                         </div>
