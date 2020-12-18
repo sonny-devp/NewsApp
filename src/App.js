@@ -14,10 +14,10 @@ class App extends Component{
     render(){
         return(
             <Router>
-                <div class="btn-group">
-                    <Link to = "/" class="btn btn-outline-light" aria-current="page">Business</Link>
-                    <Link to = "/Tech" class="btn btn-outline-light">Tech</Link>
-                    <Link to ="/Apple" class="btn btn-outline-light">Apple</Link>
+                <div className="btn-group">
+                    <Link to = "/" className="btn btn-outline-light" aria-current="page">Business</Link>
+                    <Link to = "/Tech" className="btn btn-outline-light">Tech</Link>
+                    <Link to ="/Apple" className="btn btn-outline-light">Apple</Link>
                 </div>
                 <div >
                     <Switch>
