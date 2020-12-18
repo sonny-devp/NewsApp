@@ -7,16 +7,16 @@ import {
 } from 'react-router-dom'
 
 import Api from './components/Negocios';
-import Bit from './components/Bitcoin';
+import Tech from './components/Tech';
 import Apple from './components/Apple';
-import './assets/css/App.css';
+
 class App extends Component{
     render(){
         return(
             <Router>
                 <div class="btn-group">
                     <Link to = "/" class="btn btn-outline-light" aria-current="page">Business</Link>
-                    <Link to = "/Bitcoin" class="btn btn-outline-light">Bitcoin</Link>
+                    <Link to = "/Tech" class="btn btn-outline-light">Tech</Link>
                     <Link to ="/Apple" class="btn btn-outline-light">Apple</Link>
                 </div>
                 <div >
@@ -24,8 +24,8 @@ class App extends Component{
                         <Route path="/" exact>
                             <Api />
                         </Route>
-                        <Route path="/Bitcoin">
-                            <Bit />
+                        <Route path="/Tech">
+                            <Tech />
                         </Route>
                         <Route path="/Apple" exact>
                             <Apple />

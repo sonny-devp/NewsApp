@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import Nav from './Navbar'
 
-const Bit = () => {
+const Tech = () => {
     const [noticias, setNoticias] = useState([])
     useEffect(() => {
         fetchData()
     }, [])
     const fetchData = async () => {
-        const data = await fetch('http://newsapi.org/v2/everything?q=bitcoin&from=2020-11-16&sortBy=publishedAt&apiKey=cfb4eb681a8f4f109da17eb4f5348f79')
+        const data = await fetch('http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=cfb4eb681a8f4f109da17eb4f5348f79')
         const users = await data.json()
         setNoticias(users.articles)
     }
@@ -15,7 +15,7 @@ const Bit = () => {
     return(
         <div>
             <Nav number = {noticias.length}/>
-            <h3 className= "display-3 text-center text-light">BITCOIN NEWS</h3>
+            <h3 className= "display-3 text-center text-light">TECH NEWS</h3>
             <div className = "container-fluid">
                 <div className = "row row-cols-1 row-cols-md-2 row-cols-xl-3">
                     {noticias.map((item,index) => (
@@ -36,4 +36,4 @@ const Bit = () => {
         </div>
  )
 }
-export default Bit;
+export default Tech;
